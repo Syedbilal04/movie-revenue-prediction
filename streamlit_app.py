@@ -208,5 +208,12 @@ if submit_button:
     predicted_gross_range = predict_gross_range(predicted_gross)
 
     st.markdown("## Prediction Result")
-    st.success(f'Predicted Revenue for "{name}": ${predicted_gross:,.2f}')
+    st.success(f"Predicted Revenue for : ${predicted_gross:,.2f}")
     st.success(f"Predicted Revenue Range: {predicted_gross_range}")
+    
+    status = "success" if predicted_gross > budget else "flop"
+    
+    if status == "success":
+        st.success(f"for final result , whether the movie is flop or success : {status}")
+    else:
+        st.error(f"for final result , whether the movie is flop or success : {status}")
