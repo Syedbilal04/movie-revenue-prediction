@@ -1,2 +1,5 @@
 models/__pycache__
 models/tempCodeRunnerFile.py
+__pycache__/
+*.py[cod]
+env/
